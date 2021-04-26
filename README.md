@@ -1,8 +1,6 @@
 # Pu-239 v0.7.0
 
-<!-- ##### I am no longer developing this code. But, if there are enough people willing to contribute their time and energy to help with this source, I would be willing to get active again. -->
-
-I have a demo site running [here](https://Pu-239.JBMatrix.net/), if you would like to take a look at it or join the conversation.
+##### I am no longer developing this code. But, if there are enough people willing to contribute their time and energy to help with this source, I would be willing to get active again.  
 
 ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/darkalchemy/Pu-239/0.7.0)
 [![GitHub license](https://img.shields.io/github/license/darkalchemy/Pu-239.svg)](https://github.com/darkalchemy/Pu-239/blob/master/LICENSE)
@@ -224,6 +222,10 @@ An image proxy for hot linked images is built in and enabled by default, disable
 
 #### Notes: 
 If sudo is necessary to run uglify.php without errors, then you have the permissions set incorrectly. See the wiki for a brief example.
+
+#### IP Addresses
+With the exception of the peers table, this project does not store the IP address of any user in the database. In addition, the users IP is not stored by default, the site administrator must manually change this setting to store IP addresses using memcached.  
+In time, the peers table will also be replaced with memcached, so that no IP will stored in the database.  
 
 #### Translations:
 This project uses gettext to manage text strings. Unfortunately, it is not yet 100%. There are still quite a few hard coded strings left here and there.  

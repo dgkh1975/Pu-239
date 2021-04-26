@@ -24,7 +24,7 @@ $stdfoot = [
     ],
 ];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $post = $_POST;
     unset($_POST, $_GET, $_FILES);
     $validator = $container->get(Validator::class);
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'email' => 'required|email',
     ]);
     if ($validation->fails() || !valid_username($post['username'], false, true)) {
-        write_log(getip() . ' has used invalid data to signup. ' . json_encode($post, JSON_PRETTY_PRINT));
+        write_log(getip(0,) . ' has used invalid data to signup. ' . json_encode($post, JSON_PRETTY_PRINT));
         header("Location: {$_SERVER['PHP_SELF']}");
         die();
     } else {
